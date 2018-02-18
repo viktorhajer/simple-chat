@@ -1,0 +1,41 @@
+$chat_width: 550px;
+$input_width: 540px;
+$chat_height: 600px;
+$head_color: #4e4e4e;
+
+#container {
+    display: flex;
+    #robot_msg {
+        .outer_box {
+            border: 1px solid #dddddd;
+            border-top: 10px solid $head_color;
+            width: $chat_width;
+            height: $chat_height;
+            background: radial-gradient(#ffffff,#dddddd);
+            overflow:auto;
+            .inner_box { 
+                position: relative;
+                padding: 15px;
+            }
+        }
+        .title { 
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: $head_color;
+            font-size: 50px;
+            letter-spacing: -5px;
+            top: 14px;
+            left: -3.5px;
+            position: relative;
+            z-index: -1;
+        }
+        input { 
+            width: $input_width;
+            border: 1px solid #dddddd;
+            padding: 10px 5px;
+            &::placeholder { 
+                font-style: italic;
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+<div class="message_box {{message.user ? 'left' : 'right'}}">
+  <div class="head">
+    <div class="creator">{{message.creator}}</div>
+    <div class="created">{{message.created | date:'shortTime'}}</div>
+    <div class="clear"></div>
+  </div>
+  <div class="text"><typing [message]="message.text" [referenceSpeed]="speed"></typing></div>
+</div>

@@ -1,0 +1,15 @@
+<div id="container">
+    
+    <div id="robot_msg">
+        <div class="title">Chat with Sam</div>
+        <div class="outer_box" #message_container>
+            <div class="inner_box" [@new_message]="messages.length">
+                <div *ngFor="let message of messages; let i = index" >
+                    <message [message]="message" [speed]="message.user ? 0 : 60"></message>
+                </div>
+            </div>
+        </div>
+        <input type="text" placeholder="Types message here..." 
+            #message_input (keyup.enter)="sendMessageToRobot(message_input.value)"/>
+    </div>
+</div>
