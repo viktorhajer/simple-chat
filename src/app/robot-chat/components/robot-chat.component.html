@@ -5,7 +5,7 @@
         <div class="outer_box" #message_container>
             <div class="inner_box" [@new_message]="messages.length">
                 <div *ngFor="let message of messages; let i = index" >
-                    <message [message]="message" [speed]="message.user ? 0 : 60"></message>
+                    <message [message]="message" [speed]="message.user ? 0 : 40"></message>
                 </div>
             </div>
         </div>

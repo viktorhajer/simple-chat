@@ -6,13 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RobotChatService } from './services/robot-message.service';
 import { HttpModule } from '@angular/http';
 import { RobotChatComponent } from './components/robot-chat.component';
-import { TypingComponent } from './components/typing.component';
+import { TypingModule } from 'ng-typing';
 
 @NgModule({
   imports: [
-    CommonModule, BrowserModule, BrowserAnimationsModule, HttpModule
+    CommonModule, BrowserModule, BrowserAnimationsModule, HttpModule, TypingModule
   ],
-  declarations: [MessageComponent, RobotChatComponent, TypingComponent],
+  declarations: [MessageComponent, RobotChatComponent],
   providers: [RobotChatService],
   exports: [RobotChatComponent]
 })
